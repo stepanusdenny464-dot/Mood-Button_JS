@@ -14,6 +14,7 @@
         let b = Math.floor(Math.random() * 255);
         return `rgb(${r}, ${g}, ${b})`;
     }
+    let total_click=0;
         const semangat = [
         "Gaspol",
         "Mantap",
@@ -27,9 +28,16 @@
         "Yakin"
         ];
         function coba(){
+        if(total_click<10){
         let kata=semangat[Math.floor(Math.random()*semangat.length)];
         document.getElementsByClassName("Klik")[0].innerText=kata;
         document.body.style.backgroundColor=randomColor()
+        total_click++}
+        else{
+            alert("Udah cukup kliknya 😆")
+            total_click=0
+        }
+        console.log(total_click)
         };
     </script>
 </body>
